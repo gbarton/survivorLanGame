@@ -1,0 +1,44 @@
+Initialize engine version: 5.2.2f1 (3757309da7e7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 560 Ti  (ID=0x1087)
+    Vendor:   NVIDIA
+    VRAM:     1227 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.163 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\gman\Documents\LanSurvivor\Builds\Built_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 48f4 -> priority: 1 
+  Thread -> id: 25b8 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.383996 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 375.
+Total: 0.271960 ms (FindLiveObjects: 0.018070 ms CreateObjectMapping: 0.012950 ms MarkObjects: 0.234313 ms  DeleteObjects: 0.006324 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.334495 ms
+Multiple NetworkManagers detected in the scene. Only one NetworkManager can exist at a time. The duplicate NetworkManager will not be used.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 305.
+Total: 0.273164 ms (FindLiveObjects: 0.013552 ms CreateObjectMapping: 0.012348 ms MarkObjects: 0.240035 ms  DeleteObjects: 0.006927 ms)
+

@@ -6,24 +6,48 @@ public class GameManagerZombieSpawner : NetworkBehaviour {
 
 	[SerializeField]
 	GameObject zombiePrefab;
-	[SerializeField]
-	GameObject zombieSpawn;
+
+	GameObject[] zombieSpawns;
 
 	private int counter;
 	private int numberOfZombies = 10;
+	private int maxNumberOfZombies = 80;
+	private float waveRate = 10;
+	private bool isSpawnActivated = true;
 
 	public override void OnStartServer () {
-		for (int i = 0; i < numberOfZombies; i++) {
-			SpawnZombies();
+		zombieSpawns = GameObject.FindGameObjectsWithTag("ZombieSpawn");
+		Debug.Log ("started");
+		StartCoroutine (ZombieSpawner ());
+
+	}
+
+	IEnumerator ZombieSpawner() {
+		for(;;) {
+			yield return new WaitForSeconds(waveRate);
+			Debug.Log ("Time passed");
+			GameObject[] zombies = GameObject.FindGameObjectsWithTag	 ("Zombie");
+			if(zombies.Length < maxNumberOfZombies) {
+				CommenceSpawn();
+			}
 		}
 	}
 
-	void SpawnZombies() {
-		GameObject go = GameObject.Instantiate (zombiePrefab, zombieSpawn.transform.position, Quaternion.identity) as GameObject;
-		NetworkServer.Spawn (go);
+	void CommenceSpawn() {
+		if (isSpawnActivated) {
+			for( int i = 0; i < numberOfZombies; i++) {
+				int rand = Random.Range (0,zombieSpawns.Length);
+				SpawnZombies(zombieSpawns[rand].transform.position);
+			}
+		}
+	}
+
+	void SpawnZombies(Vector3 spawnPos) {
+		GameObject go = GameObject.Instantiate (zombiePrefab, spawnPos, Quaternion.identity) as GameObject;
 		counter++;
 
 		go.GetComponent<ZombieId> ().zombieID = "Zombie " + counter;
+		NetworkServer.Spawn (go);
 	}
 
 	// Update is called once per frame

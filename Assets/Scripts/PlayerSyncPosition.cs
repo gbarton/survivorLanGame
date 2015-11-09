@@ -3,6 +3,9 @@ using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
+/**
+ * NOT USED ANYMORE
+ */
 [NetworkSettings (channel = 0, sendInterval = 0.033f)]
 public class PlayerSyncPosition : NetworkBehaviour {
 

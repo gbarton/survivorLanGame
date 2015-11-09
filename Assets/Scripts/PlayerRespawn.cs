@@ -9,11 +9,15 @@ public class PlayerRespawn : NetworkBehaviour {
 	private Image crossHairImage;
 	private GameObject respawnButton;
 
-	// Use this for initialization
-	void Start () {
+	public override void PreStartClient () {
+		base.PreStartClient ();
 		healthScript = GetComponent<PlayerHealth> ();
 		healthScript.EventRespawn += EnablePlayer;
+	}
 
+	// Use this for initialization for local player only
+	// isLocalPlayer guarenteed to be set on this method
+	public override void OnStartLocalPlayer () {
 		crossHairImage = GameObject.Find ("CrossHairImage").GetComponent<Image> ();
 		SetRespawnButton ();
 	}
@@ -26,7 +30,8 @@ public class PlayerRespawn : NetworkBehaviour {
 		}
 	}
 
-	void OnDisable() {
+	// unsubscribe when disconnected
+	public override void OnNetworkDestroy() {
 		healthScript.EventRespawn -= EnablePlayer;
 	}
 

@@ -21,8 +21,8 @@ public class PlayerHealth : NetworkBehaviour {
 	public delegate void RespawnDelegate();
 	public event RespawnDelegate EventRespawn;
 
-	// Use this for initialization
-	void Start () {
+	// Use this for initialization, all client side
+	public override void OnStartLocalPlayer () {
 		healthText = GameObject.Find ("Health Text").GetComponent<Text> ();
 		SetHealthText ();
 	}

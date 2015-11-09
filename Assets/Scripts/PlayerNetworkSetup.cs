@@ -8,7 +8,7 @@ public class PlayerNetworkSetup : NetworkBehaviour {
 	[SerializeField] AudioListener audioListener;
 
 	// Use this for initialization
-	void Start () {
+	public override void OnStartLocalPlayer () {
 		if (isLocalPlayer) {
 			GameObject.Find("SceneCamera").SetActive(false);
 

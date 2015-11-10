@@ -17,7 +17,6 @@ public class GameManagerZombieSpawner : NetworkBehaviour {
 
 	public override void OnStartServer () {
 		zombieSpawns = GameObject.FindGameObjectsWithTag("ZombieSpawn");
-		Debug.Log ("started");
 		StartCoroutine (ZombieSpawner ());
 
 	}
@@ -25,7 +24,6 @@ public class GameManagerZombieSpawner : NetworkBehaviour {
 	IEnumerator ZombieSpawner() {
 		for(;;) {
 			yield return new WaitForSeconds(waveRate);
-			Debug.Log ("Time passed");
 			GameObject[] zombies = GameObject.FindGameObjectsWithTag	 ("Zombie");
 			if(zombies.Length < maxNumberOfZombies) {
 				CommenceSpawn();

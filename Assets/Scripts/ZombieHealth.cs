@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 public class ZombieHealth : NetworkBehaviour {
 
-	private int health = 50;
+	private int health = 20;
 
 
 	public void DeductHealth(int dmg) {
@@ -13,7 +13,7 @@ public class ZombieHealth : NetworkBehaviour {
 	}
 
 	void CheckHealth() {
-		if(health >= 0) {
+		if(health <= 0) {
 			Destroy (gameObject);
 		}
 

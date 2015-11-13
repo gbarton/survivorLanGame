@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 public class PlayerShoot : NetworkBehaviour {
 
-	private int damage = 25;
+	private int damage = 2;
 	private float range = 200f;
 	[SerializeField]
 	private Transform camTransform;

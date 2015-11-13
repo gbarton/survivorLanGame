@@ -18,13 +18,21 @@ PLAYER
 
 
 WORLD
-* Make collectable coins to complete level
+* ~~Make collectable coins to complete level.~~
+* Make coins per level go up?
+* Make level clearing/completion work based on coins collected.
 * Make levels get harder (more AI, stronger, faster, etc)
 * Make level multi dimensional, block terrain, get navmeshs's working
+* ~~Make level night time, low light.~~
 
 WEAPONS
 * Make weapons use ammo
 * Make ammo regen over time
 * Make 4 weapons, pistol, machine gun, bomb, railgun.
 
+SOUNDS
+* Get basic weapons sounds.
+* Get basic enemy/AI sounds.
+* Get music track playing in the background.
+* Make music adjust to events.
 

@@ -19,6 +19,9 @@ PLAYER
 
 WORLD
 * ~~Make collectable coins to complete level.~~
+ * Coins rotation wrong on clients
+ * ~~coins do not collect globally~~
+ * Player adding after game run doesnt see true coin count till another coin is collected
 * Make coins per level go up?
 * Make level clearing/completion work based on coins collected.
 * Make levels get harder (more AI, stronger, faster, etc)

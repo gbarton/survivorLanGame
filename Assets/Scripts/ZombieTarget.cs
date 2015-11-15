@@ -6,6 +6,7 @@ public class ZombieTarget : NetworkBehaviour {
 
 	private NavMeshAgent agent;
 	private Transform myTransform;
+	private Light headLight;
 	public Transform targetTransform;
 	private bool wandering = false;
 	private Vector3 wanderPoint;
@@ -17,6 +18,9 @@ public class ZombieTarget : NetworkBehaviour {
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
 		myTransform = transform;
+		headLight = gameObject.GetComponentInChildren<Light> ();
+
+		// dont understand this stuffs yet
 		raycastLayer = 1 << LayerMask.NameToLayer("Player");
 
 		// start the thread
@@ -96,14 +100,18 @@ public class ZombieTarget : NetworkBehaviour {
 	}
 
 	void ToggleWandering() {
-		// turn off
+		// turn off, targeted
 		if (wandering) {
 			agent.speed = 3.5f;
 			wandering = false;
+			headLight.color = Color.red;
+			headLight.intensity = 2.5f;
 		} else {
 			wandering = true;
 			agent.speed = 2.0f;
 			wanderPoint = new Vector3(Random.Range (-100,100),0,Random.Range (-100,100));
+			headLight.color = Color.white;
+			headLight.intensity = 1.7f;
 		}
 	}
 

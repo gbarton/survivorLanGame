@@ -4,7 +4,8 @@ List of things to do:
 
 AI
 * Make AI responsive to sight, damage.
-* Make AI move randomly when no target
+* ~~Make AI move randomly when no target~~
+  * ~~Make ai speed alter when wandering vs targeted~~
 * Make AI pick 'best' target based on distance, and health
 * Make AI able to share a target somewhat to very near neighbours
 * Make AI able to jump and fall.

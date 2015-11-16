@@ -61,8 +61,7 @@ public class ZombieTarget : NetworkBehaviour {
 		if (targetTransform != null) {
 			if(targetTransform.GetComponent<BoxCollider> ().enabled == false) {
 				targetTransform = null;
-			}
-			if(Vector3.Distance(myTransform.position, targetTransform.position) > radius) {
+			} else if(Vector3.Distance(myTransform.position, targetTransform.position) > radius) {
 				targetTransform = null;
 			}
 

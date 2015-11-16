@@ -29,6 +29,7 @@ WORLD
 * Make level clearing/completion work based on coins collected.
 * Make levels get harder (more AI, stronger, faster, etc)
 * Make level multi dimensional, block terrain, get navmeshs's working
+* ~~Get some basic textures from the asset store to make things less boring~~
 * ~~Make level night time, low light.~~
 
 WEAPONS

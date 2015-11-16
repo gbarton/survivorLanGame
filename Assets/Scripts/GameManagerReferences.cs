@@ -7,6 +7,9 @@ public class GameManagerReferences : NetworkBehaviour {
 	// dunno why this has to be outside player
 	public GameObject respawnButton;
 
+	// global range we can use for spawning purposes
+	public static int levelSize = 500;
+
 	[SyncVar (hook="UpdatePlayersVal")]
 	public int coinsCollected = 0;
 

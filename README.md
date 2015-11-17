@@ -33,7 +33,8 @@ WORLD
 * ~~Make level night time, low light.~~
 
 WEAPONS
-* Make weapons use ammo
+* ~~Make weapons use ammo~~
+ * generic out weapon part from shooting script to enable gun swapping
 * Make ammo regen over time
 * Make 4 weapons, pistol, machine gun, bomb, railgun.
 

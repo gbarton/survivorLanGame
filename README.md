@@ -1,5 +1,11 @@
 ##A simple leveling survivor game
 
+The year is 2045.  Quantum computing has revolutionized cyber warfare to the point that physical protection of software systems is all but impossible.  Large corporations have turned to extreme retribution tactics in order to maintain control of their IP.  These tactics are in all practical purposes hired armies that are higlhy agile, ruthless, well equiped, and relentless. They operate outside of the legal boundaries by sheer force, no governing body could sustain an all out war with these organization.
+
+You and your team are on the run.  You sucessfully exfiltrated information from a corporation that has been operating illegal research on humans for the last 12 years.  You knew what you were getting into, you knew the risks, you have something of theirs in your internal data stores and you are being hunted for it.  You know there is no getting out of this alive, your sole goal is to get this distributed to the global web as fast as possible, before they find you, before they take you out..
+
+
+
 List of things to do:
 
 AI
@@ -34,7 +40,7 @@ WORLD
 
 WEAPONS
 * ~~Make weapons use ammo~~
- * generic out weapon part from shooting script to enable gun swapping
+ * generic out weapon part from shooting script to enable gun swapping
 * Make ammo regen over time
 * Make 4 weapons, pistol, machine gun, bomb, railgun.
 

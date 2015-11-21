@@ -17,6 +17,7 @@ AI
 * Make AI pick 'best' target based on distance, and health
 * Make AI able to share a target somewhat to very near neighbours
 * Make AI able to jump and fall.
+* Make NPC AI that runs away from conflict.
 
 
 PLAYER
@@ -27,16 +28,15 @@ PLAYER
 
 
 WORLD
-* ~~Make collectable coins to complete level.~~
+* ~~Make collectable coins to give some kind of bonus?~~
  * Coins rotation wrong on clients
  * ~~coins do not collect globally~~
  * Player adding after game run doesnt see true coin count till another coin is collected
 * Make coins per level go up?
-* Make level clearing/completion work based on coins collected.
-* Make levels get harder (more AI, stronger, faster, etc)
 * Make level multi dimensional, block terrain, get navmeshs's working
 * ~~Get some basic textures from the asset store to make things less boring~~
 * ~~Make level night time, low light.~~
+* Make kiosks for logging into to upload payloads.
 
 WEAPONS
 * ~~Make weapons use ammo~~

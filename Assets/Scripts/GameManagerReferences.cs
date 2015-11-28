@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class GameManagerReferences : NetworkBehaviour {
 
@@ -13,6 +14,9 @@ public class GameManagerReferences : NetworkBehaviour {
 	[SyncVar (hook="UpdatePlayersVal")]
 	public int coinsCollected = 0;
 
+	public Canvas menu;
+	private bool menuActive = false;
+
 	// from server side update all players
 	[Server]
 	void UpdatePlayersVal(int coins) {
@@ -22,5 +26,28 @@ public class GameManagerReferences : NetworkBehaviour {
 			p.GetComponent<PlayerCollectCoin> ().AddCoin(coinsCollected);
 		}
 	}
+
+
+	// Update is called once per frame
+	void Update () {
+		CheckForMenu ();
+	}
+	
+	void CheckForMenu() {
+	//	if (!isLocalPlayer) {
+	//		return;
+	//	}
+		
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			// toggle active
+			menuActive = ! menuActive;
+
+			menu.enabled = menuActive;
+
+		}
+
+	}
+
+
 
 }

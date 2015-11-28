@@ -23,7 +23,7 @@ public class PlayerLatency : NetworkBehaviour {
 	void ShowLatency() {
 		if (isLocalPlayer) {
 			latency = nClient.GetRTT();
-			latencyText.text = latency.ToString();
+			latencyText.text = "Latency: " + latency.ToString();
 		}
 	}
 

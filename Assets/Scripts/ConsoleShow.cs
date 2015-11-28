@@ -7,6 +7,12 @@ public class ConsoleShow : NetworkBehaviour {
 
 	public Canvas canvas;
 	private CanvasGroup canvasGroup;
+	private Image loadingImage;
+
+	[SyncVar]
+	private float loadedAmt = 0.0f;
+	private float loadSpeed = 0.01f;
+
 	// are we activated
 	[SyncVar]
 	private bool enabled = false;
@@ -21,6 +27,7 @@ public class ConsoleShow : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 		canvasGroup = canvas.GetComponentInChildren<CanvasGroup> ();
+		loadingImage = canvas.GetComponentInChildren<Image> ();
 	}
 
 	
@@ -40,9 +47,17 @@ public class ConsoleShow : NetworkBehaviour {
 			} else {
 				canvasGroup.alpha = 1.0f;
 			}
+			// update loading part
+			Debug.Log ("loading " + loadedAmt);
+
+			//loadedAmt = Mathf.Lerp(loadedAmt,1.0f,Time.deltaTime*loadSpeed);
+			loadedAmt = Mathf.MoveTowards(loadedAmt,1.0f, Time.deltaTime*loadSpeed);
+			loadingImage.fillAmount = loadedAmt;
+
 		} else {
 			if (canvasGroup.interactable) {
 				canvasGroup.interactable = false;
+				loadingImage.fillAmount = 0.0f;
 			}
 			if (canvasGroup.alpha > 0.1f) {
 				canvasGroup.alpha = Mathf.Lerp (canvasGroup.alpha, 0.0f, Time.deltaTime * fadeSpeed);
